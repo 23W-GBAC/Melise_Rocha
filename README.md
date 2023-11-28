@@ -1,4 +1,4 @@
-# Melise_Rocha
+# Melise Rocha Blog
 # How can we improve MRI images quality?
 Preprocessing MRI images to enhance their quality and remove noise is a critical step in preparing the data for computational analysis. Several techniques are employed in this preprocessing stage to ensure the reliability and accuracy of subsequent computational processes. Withe the increase in use of AI for healthcare, we also need to consider how to improve the data quality. Here are some of the pre-processing steps we can do using python programming language to increase image quality:
 
