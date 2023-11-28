@@ -9,5 +9,5 @@ layout: default
 
 # Dealing With Nifti Data
 
-{% capture nifti_data_content %}{% include_relative Reading_a_nifti_file.md %}{% endcapture %}
+{% capture nifti_data_content %}{% include_relative Reading a nifti file.md %}{% endcapture %}
 {{ nifti_data_content | markdownify }}
