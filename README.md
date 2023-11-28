@@ -52,5 +52,6 @@ SimpleITK offers a range of tools for image analysis, including registration, se
 Scikit-image contains numerous image processing algorithms suitable for MRI preprocessing, including noise reduction methods like Gaussian and median filtering.
 
 ## Numpy 
-It is a fundamental library for numerical operations in Python. It's often used for array manipulation and basic image processing tasks.
+It is a fundamental library for numerical operations in Python. It's often used for array manipulation and basic image processing tasks. It can also be useful to perform image normalization.
+
 
