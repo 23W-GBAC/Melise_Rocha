@@ -38,4 +38,19 @@ Z-Score Normalization: Rescales intensities to have a mean of zero and a standar
 
 Histogram Matching: Matches the intensity distributions of different images, aligning their histograms to a reference image's histogram.
 
-I aim to create a pipeline performing all these steps in an MRI file. 
+# What I want to do and how to achieve that?
+
+I aim to create a pipeline performing all these steps in an MRI file. At first I am considering using Python programming language and the following libraries:
+
+## NiBabel
+This library provides read and write access to common medical imaging formats, including DICOM and NIfTI. It's useful for loading MRI data into Python for further processing.
+
+## ITK Snap
+SimpleITK offers a range of tools for image analysis, including registration, segmentation, and bias field correction.
+
+## Scikit-image package from Scikitlearn
+Scikit-image contains numerous image processing algorithms suitable for MRI preprocessing, including noise reduction methods like Gaussian and median filtering.
+
+## Numpy 
+It is a fundamental library for numerical operations in Python. It's often used for array manipulation and basic image processing tasks.
+
