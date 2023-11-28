@@ -1,4 +1,5 @@
 # Melise Rocha Blog in Data Quality
+
 # How can we improve MRI images quality?
 Preprocessing MRI images to enhance their quality and remove noise is a critical step in preparing the data for computational analysis. Several techniques are employed in this preprocessing stage to ensure the reliability and accuracy of subsequent computational processes. Withe the increase in use of AI for healthcare, we also need to consider how to improve the data quality. Here are some of the pre-processing steps we can do using python programming language to increase image quality:
 
@@ -6,7 +7,7 @@ Preprocessing MRI images to enhance their quality and remove noise is a critical
 Utilize Gaussian smoothing, median filtering, and wavelet denoising techniques to reduce inherent noise in MRI images.
 Techniques:
 
-Gaussian Smoothing: This method uses a Gaussian filter to blur the image slightly, reducing high-frequency noise while preserving structural information.
+[Gaussian Smoothing](https://medium.com/jun94-devpblog/cv-2-gaussian-and-median-filter-separable-2d-filter-2d11ee022c66): This method uses a Gaussian filter to blur the image slightly, reducing high-frequency noise while preserving structural information.
 
 Median Filtering: It replaces each pixel's value with the median value of neighboring pixels, effective in reducing impulse noise or salt-and-pepper artifacts.
 
