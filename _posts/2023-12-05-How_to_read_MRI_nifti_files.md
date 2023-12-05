@@ -3,9 +3,8 @@ layout: default
 description: Reading MRI Nifti files using Nibabel Library-The Basics
 ---
 # Exploring MRI Images with Nibabel in Python - Printing the header
-## I am going to teach you how to use python Nibabel Library to read MRI NIFTI files!
+## I am going to teach you how to use Python Nibabel Library to read MRI NIFTI files!
 
-# Exploring MRI Images with Nibabel in Python - Printing the header
 Medical imaging is crucial for understanding the complexities of the human body. Python offers powerful libraries like Nibabel that facilitate the manipulation and analysis of medical imaging data, particularly MRI images.
 
 ## The Nibabel Library
