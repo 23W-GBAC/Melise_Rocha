@@ -2,7 +2,6 @@
 ---
 layout: default
 ---
-You can find my blogs [here](./blog/)
 
 # Blogs
 {% for post in site.posts %}
