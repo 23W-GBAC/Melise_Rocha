@@ -5,7 +5,7 @@ description: Reading MRI Nifti files using Nibabel Library-The Basics
 # Exploring MRI Images with Nibabel in Python - Printing the header
 ## I am going to teach you how to use Python Nibabel Library to read MRI NIFTI files!
 
-Medical imaging is crucial for understanding the complexities of the human body. Python offers powerful libraries like Nibabel that facilitate the manipulation and analysis of medical imaging data, particularly MRI images.
+Medical imaging is crucial for understanding the complexities of the human body. Python offers powerful libraries like Nibabel that facilitate the manipulation and analysis of medical imaging data.
 
 ## The Nibabel Library
 Nibabel is a Python library designed for working with neuroimaging data formats such as NIfTI and ANALYZE, commonly used in MRI studies. It simplifies the process of handling these images, making it an indispensable tool for researchers and practitioners in the field.
@@ -30,6 +30,9 @@ print(header)
 
 ```
 ## Expected output and what it means
+
+The header stores important information regarding the image, I will walk through the two most important ones. When you run the code you shoudl expect to see this output:
+
     === MRI Image Header ===
     <class 'nibabel.nifti1.Nifti1Header'> object, endian='<'
     sizeof_hdr      : 348
@@ -79,6 +82,8 @@ print(header)
 
 
 
-```python
 
-```
+* dim: This is a list where dim[0] indicated the number of dimensions; dim[1], dim[2], and dim[3] refer to the numbe of slices in each plane-sagittal, coronal and axial, respectively; dim[4] refers to time; and others can store any other information.
+* pixdim: informations regarding the voxel size, where pixdim[1], pixdim[2], pixdim[3] refer to voxel size in sagittal, coronal and axial plane respectively. Fun fact: the voxel size in z axis is usually the space between each slice in a MRI.
+
+  
