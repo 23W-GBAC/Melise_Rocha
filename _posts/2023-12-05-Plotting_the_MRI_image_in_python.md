@@ -54,3 +54,15 @@ After that, we use matplolib.pyplot to plot the images, and select the color map
 # What if I want to see all slices? 
 Then you would need another library, called NiLearn.
 
+```python
+from nilearn import image as nii
+from nilearn import plotting
+
+img = nii.mean_img(
+    "/path/to/yout/niftifile.nii.gz"
+)
+view = plotting.view_img(img, cmap='gray')
+view.open_in_browser()
+
+```
+This code will pop a browse viewer of your MRI file.
