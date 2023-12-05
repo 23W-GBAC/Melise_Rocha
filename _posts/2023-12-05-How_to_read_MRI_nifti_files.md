@@ -29,3 +29,5 @@ print("=== MRI Image Header ===")
 print(header)
 
 ```
+## Expected output and what it means
+
