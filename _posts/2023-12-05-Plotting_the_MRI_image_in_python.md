@@ -2,6 +2,8 @@
 layout: default
 description: Usin Python to plot the conten of MRI Nifti files 
 ---
+December 12th 2023
+
 In this tutorial I will teach you how to use Python to plot the slices of an MRI file. Keep in mind the following that in a position (x, y, z):
 
 * x = axes1/ sagittal plane
