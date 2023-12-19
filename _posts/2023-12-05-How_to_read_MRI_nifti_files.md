@@ -2,6 +2,8 @@
 layout: default
 description: Reading MRI Nifti files using Nibabel Library-The Basics
 ---
+December 5th 2023
+
 # Exploring MRI Images with Nibabel in Python - Printing the header
 ## I am going to teach you how to use Python Nibabel Library to read MRI NIFTI files!
 
