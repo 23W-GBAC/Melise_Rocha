@@ -105,7 +105,8 @@ Example 2: Comparing the Axial View
 
 Example 3: Comparing the Sagittal View
 
-![image](https://github.com/23W-GBAC/Melise_Rocha/assets/127310708/eb7c0204-c84b-4430-8736-0daa76d3cb58)
+![image](https://github.com/23W-GBAC/Melise_Rocha/assets/127310708/e9e830d1-61aa-4889-b96f-db29de1d4692)
+
 
 The images are visible better and the most important is that they will be all following the same standard! Therefore, they can be easily used to train any Artificial Intelligence model! 
 
