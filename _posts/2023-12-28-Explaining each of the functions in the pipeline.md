@@ -143,9 +143,13 @@ def background_stripping(
 ```
 
 1) It will accept a SimpleITK image and a numpy array as input, which is then converted to a SimpleITK image.
-2) It will perform a simple thresholding operation using the filter ```sitk.LiThreshold```. For those of you who are not familiar with thresholding operations, it sets a "threshold value" if the voxel intensity is below that value it is converted to black and if it is above it is converted to white. So. you get a binary (black and white image). The optimal threshold is already automatically calculated by the ```sitk.LiThreshold```.   
+   
+2) It will perform a simple thresholding operation using the filter ```sitk.LiThreshold```. For those of you who are not familiar with thresholding operations, it sets a "threshold value" if the voxel intensity is below that value it is converted to black and if it is above it is converted to white. So. you get a binary (black and white image). The optimal threshold is already automatically calculated by the ```sitk.LiThreshold```.
+    
 3) After the threshold I have noticed some small holes in the mask due to the automatic threshold that was set. I asked ChatGPT what I could do to fill the holes and he showed me the ```sitk.BinaryMorphologicalClosing```image filter. The closing operation dilates an image and then erodes the dilated image, using the same structuring element for both operations. Morphological closing is useful for filling small holes in an image while preserving the shape and size of large holes and objects in the image.
+   
 4) The ```sitk.BinaryFillhole``` will "double ensure that there is not even a single small hole in the head mask generated"
+   
 5) The code will then return the mask and the mask applied to the image as the segmented image.
 
 Just to clarify: In the context of image processing and computer vision, a mask is indeed a binary file or, more commonly, a binary image representing areas of interest within an image or a defined spatial region. A mask essentially serves as a stencil or a template that indicates which parts of an image should be included or excluded in further processing or analysis. When you multiply an image by a mask you will extract the region in the image represented by the mask!
@@ -205,10 +209,15 @@ def bias_field_correction(
 ```
 
 1) It will accept a SimpleITK image and a numpy array as input, which is then converted to a SimpleITK image.
+   
 2) There is the optional headmask parameter to limit the area of Bias Field correction.
+   
 3) Normalization of image intensities from 0-255 using the ```sitk.RescaleIntensity```
+   
 4) The downsampling ocurring in ```transformed = sitk.Shrink(img, [shrinkFactor] * transformed.GetDimension())``` is not mandatory and it is only being used to save computational power, as I want a fast tool.
+   
 5) The N4BiasFieldCorrectionImageFilter from SimpleITK is applied to the downsampled image using the head mask if provided. This step estimates and removes the bias field from the image.
+   
 6) The bias-corrected image is reconstructed to the original resolution by dividing it by the exponential of the log bias field.
 
 There is not visible difference between the original image and the bias field corrected one!
@@ -284,9 +293,13 @@ def equalize_adptive_3D(
     return equalized_data
 ```
 1) The function will take as input a numpy array.
+   
 2) It initializes an output array equalized_data with the same shape as the input using the ```np.zeros_like(src)```
+   
 3) It creates a CLAHE object using ```cv2.createCLAHE```, specifying the clipLimit and tileGridSize
+   
 4) Normalize each channel of the image using ```cv2.normalize```
+   
 5) Applies CLAHE to the normalized image using ```clahe.apply```and save it to the equalized_data array created in the beggining
 
 ## Voxel size normalization, number of slices normalization and fixing orientation error 
