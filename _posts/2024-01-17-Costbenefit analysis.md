@@ -25,9 +25,13 @@ I was able to create a pipeline with amazing results, as showcased in this [post
 ## Best Advantages 
 
 1) Significant Time Savings: The most notable advantage of our preprocessing pipeline is its efficiency. While traditional methods such as FreeSurfer and fMRIprep take upwards of 8 hours to process a single NIFTI image file, our pipeline can accomplish the same task in just 1 minute and 30 seconds. This represents an astonishing time reduction of over 95%.
+   
 2) Customization and Flexibility: a lot of functions in the pipeline come with parameters that can be selected by the user, such as voxel size, image size, weight of denoising method and bias field correction! Allowing for some changes if the user is not satisfied with the result.
+   
 3) Scalability: it does not matter which brain region I will segment, I can use the same pipeline to preprocess all of the files! There is also the possibility to process a whole dataset just with one script!
+   
 4) Standardization: I am sure the same preprocessing steps will be followed for every image which is FUNDAMENTAL for dataset construction in Artificial Intelligence!
+   
 5) Efficiency: I can allocate time for further research if I automate the preprocessing step and do not need to monitor it!
 
 "As nothing is only flowers..." - In Portuguese, we say "Como nada é só flores..." literally translating  To give the bad news - I will also cover the downsides of this project:
@@ -35,14 +39,19 @@ I was able to create a pipeline with amazing results, as showcased in this [post
 ## Disadvantages 
 
 1) Changes are difficult to make and at the moment require a lot of technical knowledge so it is not very user-friendly
+   
 2) A lot of updates will need to be made to keep up with the most recent tools of image processing from different libraries
+   
 3) It is not available online yet
 
 ## There is room for improvement
 
 1) Making the choices and parameters easier to set through a configuration file instead of direct changes to the code
+   
 2) Develop an optional tool to also apply the preprocessing steps to already manually segmented masks
+   
 3) Adding more preprocessing steps - for example more denoising methods - so the user can choose the best fit!
+   
 4) Collaborating with domain experts: Partnering with neuroscientists, radiologists, and other domain experts can enrich the pipeline's functionality by incorporating domain-specific knowledge and insights. 
 
 ## Final Thoughts
