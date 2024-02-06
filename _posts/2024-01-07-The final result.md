@@ -2,6 +2,11 @@ Hello!!
 
 I am here to present the final version of my MRI preprocessor pipeline. As I had already finished the python code for it, carefully explained [here](https://23w-gbac.github.io/Melise_Rocha/2023/12/28/Explaining-each-of-the-functions-in-the-pipeline.html).
 
+The Pipeline will do the steps described in the workflow below: 
+
+![image](https://github.com/23W-GBAC/Melise_Rocha/assets/127310708/c6a6b13a-8407-443d-af29-5271b302e9e2)
+
+
 At first I was using the code below to run the preprocessor: 
 
 ```python
