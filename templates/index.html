@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <style>
+        body {
+            background-color: #f2f2f2; /* Set the background color to gray */
+        }
+
+        form {
+            margin-top: 20px; /* Add margin at the top of the form */
+            background-color: #fff; /* Set the form background color to white */
+            padding: 20px; /* Add padding to the form */
+            border-radius: 10px; /* Add border radius for a rounded look */
+        }
+
+        input[type="file"] {
+            margin-bottom: 10px; /* Add margin below the "Choose File" button */
+        }
+
+        .author {
+            margin-top: 30px; /* Add margin at the top of the author section */
+            font-style: italic;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nifti File Upload and Processing</h1>
+    <h4>Hello!</h4>
+    <h4>Please upload your file and wait while it is being processed! Note it will already download automatically in your Downloads folder when it is finished!</h4>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if success %}
+        <p style="color: green;">File processed successfully! <a href="{{ url_for('download_file', filename=output_filename) }}">Download</a></p>
+    {% endif %}
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" accept=".nii.gz" required>
+        <br>
+        <input type="submit" value="Upload">
+    </form>
+
+    <div class="author">
+        <p>Author: Melise Rocha</p>
+    </div>
+</body>
+</html>
