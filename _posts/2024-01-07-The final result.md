@@ -26,6 +26,7 @@ nib.save(nifti_img, '/path/to/save/processedimage.nii.gz')
 However, I identified two problems with this code and I will cover how I adressed it to develop the final solution!
 
 1) It was not very user-friendly or attractive to the final customers
+   
 2) I could not apply this to a large dataset! It only works for single files, and regarding image processing we will deal with multiple files at the same time most of the time!
 
 ## Creating a HTML webpage for the project 
@@ -35,8 +36,11 @@ I was actually having a class about Flask when I clicked that I could use it to 
 So I built a Flask application that allows you to: 
 
 1) Select a file from your computer - only accepts .nii.gz extension - which is the NIFTI extension
+   
 2) Click on ```upload``` button and this will automatically start the preprocessing step, which takes roughly 1 and a half minute
+   
 3) The image will automatically be saved in the Downloads folder of your computer with the original filename + "_normalized_image.nii.gz"
+   
 4) If you click in Download button it will also Download it in Downloads folder.
 
 Here you can see the screen visible to the user: 
